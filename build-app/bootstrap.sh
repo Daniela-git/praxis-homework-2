@@ -10,6 +10,9 @@ yum install -y golang
 curl -sL https://rpm.nodesource.com/setup_10.x | sudo bash -
 yum install -y nodejs
 
+#---vue
+npm install -g @vue/cli
+
 #cloning the app repo
 git clone https://github.com/jdmendozaa/vuego-demoapp.git
 

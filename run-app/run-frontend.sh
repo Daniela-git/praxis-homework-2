@@ -1,11 +1,15 @@
 #!/usr/bin/env bash
+
+rm -fr /shared/dist
+tar -xvf /shared/frontend.tar -C /shared
+#---nginx
 yum -y install epel-release
 yum update -y
 yum install -y nginx
-
+#start
 systemctl start nginx
 systemctl enable nginx
-tar -xvf /shared/frontend.tar
+#chage the config
 cat <<-'archivo' > /etc/nginx/nginx.conf
 user  nginx;
 worker_processes  1;
