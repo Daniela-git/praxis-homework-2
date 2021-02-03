@@ -19,7 +19,7 @@ go build
 mv /home/vagrant/vuego-demoapp/server/vuego-demoapp /shared
 
 #build the frontend
-cat <<-'archivo' > ../spa/.env.production
+cat <<-'archivo' > ../spa/.env.production.local
 VUE_APP_API_ENDPOINT="http://10.0.0.8:4001/api"
 archivo
 cd ../spa
